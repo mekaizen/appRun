@@ -83,6 +83,17 @@
                     <target>17</target> <!-- Replace with your installed Java version -->
                 </configuration>
             </plugin>
+
+            <!-- Surefire report plugin for generating HTML reports -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-report-plugin</artifactId>
+                <version>3.0.0-M5</version>
+                <configuration>
+                    <reportFormat>html</reportFormat> <!-- Generate HTML reports -->
+                    <outputDirectory>${project.build.directory}/surefire-reports</outputDirectory> <!-- Specify report directory -->
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 </project>
