@@ -12,34 +12,52 @@ import java.net.URL;
 
 public class DriverFactory {
 
+//    public static WebDriver getDriver(String browser) {
+//        WebDriver driver = null;
+//        String remoteUrl = System.getProperty("remoteUrl");
+//try {
+//    switch (browser.toLowerCase()) {
+//        case "chrome":
+//            if (remoteUrl != null && !remoteUrl.isEmpty()) {
+//                ChromeOptions chromeOptions = new ChromeOptions();
+//                chromeOptions.addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage");
+//                driver = new RemoteWebDriver(new URL(remoteUrl), chromeOptions);
+//            } else {
+//                ChromeOptions chromeOptions = new ChromeOptions();
+//                chromeOptions.addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage");
+//                driver = new ChromeDriver(chromeOptions);
+//            }
+//            break;
+//        case "firefox":
+//
+//            driver = new FirefoxDriver();
+//            break;
+//        default:
+//            System.out.println("Unsupported browser. Defaulting to Chrome.");
+//            driver = new ChromeDriver();
+//            break;
+//    }
+//}catch (Exception e){
+//    e.printStackTrace();
+//}
+//        return driver;
+//    }
+
+
     public static WebDriver getDriver(String browser) {
         WebDriver driver = null;
-        String remoteUrl = System.getProperty("remoteUrl");
-try {
-    switch (browser.toLowerCase()) {
-        case "chrome":
-            if (remoteUrl != null && !remoteUrl.isEmpty()) {
-                ChromeOptions chromeOptions = new ChromeOptions();
-                chromeOptions.addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage");
-                driver = new RemoteWebDriver(new URL(remoteUrl), chromeOptions);
-            } else {
-                ChromeOptions chromeOptions = new ChromeOptions();
-                chromeOptions.addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage");
-                driver = new ChromeDriver(chromeOptions);
-            }
-            break;
-        case "firefox":
-
-            driver = new FirefoxDriver();
-            break;
-        default:
-            System.out.println("Unsupported browser. Defaulting to Chrome.");
-            driver = new ChromeDriver();
-            break;
-    }
-}catch (Exception e){
-    e.printStackTrace();
-}
+        switch (browser.toLowerCase()) {
+            case "chrome":
+                driver = new ChromeDriver();  // No remote URL, local ChromeDriver
+                break;
+            case "firefox":
+                driver = new FirefoxDriver();  // Local FirefoxDriver
+                break;
+            default:
+                System.out.println("Unsupported browser. Defaulting to Chrome.");
+                driver = new ChromeDriver();  // Default to local ChromeDriver
+                break;
+        }
         return driver;
     }
 }
