@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-01-16T13:23:13 IST" name="All Test Suite" finished-at="2025-01-16T13:23:23 IST" duration-ms="10000">
+  <suite started-at="2025-01-16T14:20:59 IST" name="All Test Suite" finished-at="2025-01-16T14:21:07 IST" duration-ms="8014">
     <groups>
     </groups>
-    <test started-at="2025-01-16T13:23:13 IST" name="selenium-web-test-framework" finished-at="2025-01-16T13:23:23 IST" duration-ms="10000">
+    <test started-at="2025-01-16T14:20:59 IST" name="selenium-web-test-framework" finished-at="2025-01-16T14:21:07 IST" duration-ms="8014">
       <class name="com.automation.tests.WebTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.automation.tests.WebTest@36c88a32]" started-at="2025-01-16T13:23:13 IST" name="setUp" finished-at="2025-01-16T13:23:16 IST" duration-ms="2705" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.automation.tests.WebTest@36c88a32]" started-at="2025-01-16T14:20:59 IST" name="setUp" finished-at="2025-01-16T14:21:01 IST" duration-ms="1336" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testGoogleSearch()[pri:0, instance:com.automation.tests.WebTest@36c88a32]" started-at="2025-01-16T13:23:16 IST" name="testGoogleSearch" finished-at="2025-01-16T13:23:23 IST" duration-ms="7188" status="PASS">
+        <test-method signature="testGoogleSearch()[pri:0, instance:com.automation.tests.WebTest@36c88a32]" started-at="2025-01-16T14:21:01 IST" name="testGoogleSearch" finished-at="2025-01-16T14:21:07 IST" duration-ms="6539" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGoogleSearch -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.tests.WebTest@36c88a32]" started-at="2025-01-16T13:23:23 IST" name="tearDown" finished-at="2025-01-16T13:23:23 IST" duration-ms="89" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.tests.WebTest@36c88a32]" started-at="2025-01-16T14:21:07 IST" name="tearDown" finished-at="2025-01-16T14:21:07 IST" duration-ms="100" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

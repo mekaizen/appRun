@@ -48,7 +48,10 @@ public class DriverFactory {
         WebDriver driver = null;
         switch (browser.toLowerCase()) {
             case "chrome":
-                driver = new ChromeDriver();  // No remote URL, local ChromeDriver
+                System.setProperty("webdriver.chrome.driver", "src/test/resources/driver/chromedriver");
+                ChromeOptions options = new ChromeOptions();
+                options.addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage");
+                driver = new ChromeDriver(options);  // No remote URL, local ChromeDriver
                 break;
             case "firefox":
                 driver = new FirefoxDriver();  // Local FirefoxDriver
